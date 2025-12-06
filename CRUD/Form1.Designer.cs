@@ -28,12 +28,306 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            Read = new Button();
+            Create = new Button();
+            Home = new Button();
+            Delete = new Button();
+            Update = new Button();
+            panel1 = new Panel();
+            Email = new Label();
+            NameL = new Label();
+            Password = new Label();
+            UserName = new Label();
+            ID = new Label();
+            numericUpDownID = new NumericUpDown();
+            textBoxEmail = new TextBox();
+            textBoxName = new TextBox();
+            textBoxUserName = new TextBox();
+            textBoxPassword = new TextBox();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            panel6 = new Panel();
+            dataGridView1 = new DataGridView();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownID).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
+            // 
+            // Read
+            // 
+            Read.BackColor = Color.FromArgb(0, 0, 192);
+            Read.Font = new Font("Segoe UI", 14F);
+            Read.ForeColor = SystemColors.ControlLightLight;
+            Read.Location = new Point(354, 44);
+            Read.Name = "Read";
+            Read.Size = new Size(161, 56);
+            Read.TabIndex = 2;
+            Read.Text = "Read";
+            Read.UseVisualStyleBackColor = false;
+            // 
+            // Create
+            // 
+            Create.BackColor = Color.DarkRed;
+            Create.Font = new Font("Segoe UI Historic", 14F);
+            Create.ForeColor = SystemColors.HighlightText;
+            Create.Location = new Point(187, 44);
+            Create.Name = "Create";
+            Create.Size = new Size(161, 56);
+            Create.TabIndex = 1;
+            Create.Text = "Create";
+            Create.UseVisualStyleBackColor = false;
+            Create.Click += Create_Click;
+            // 
+            // Home
+            // 
+            Home.BackColor = Color.LightSeaGreen;
+            Home.Font = new Font("Segoe UI", 14F);
+            Home.Location = new Point(20, 44);
+            Home.Name = "Home";
+            Home.Size = new Size(161, 56);
+            Home.TabIndex = 0;
+            Home.Text = "Home";
+            Home.UseVisualStyleBackColor = false;
+            Home.Click += Home_Click;
+            // 
+            // Delete
+            // 
+            Delete.BackColor = Color.DarkGreen;
+            Delete.Font = new Font("Segoe UI", 14F);
+            Delete.ForeColor = SystemColors.ControlLightLight;
+            Delete.Location = new Point(688, 44);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(161, 56);
+            Delete.TabIndex = 4;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = false;
+            // 
+            // Update
+            // 
+            Update.BackColor = Color.Purple;
+            Update.Font = new Font("Segoe UI", 14F);
+            Update.ForeColor = SystemColors.ButtonHighlight;
+            Update.Location = new Point(521, 44);
+            Update.Name = "Update";
+            Update.Size = new Size(161, 56);
+            Update.TabIndex = 3;
+            Update.Text = "Update";
+            Update.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.LightSalmon;
+            panel1.Controls.Add(Update);
+            panel1.Controls.Add(Delete);
+            panel1.Controls.Add(Home);
+            panel1.Controls.Add(Create);
+            panel1.Controls.Add(Read);
+            panel1.Location = new Point(632, 780);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(866, 117);
+            panel1.TabIndex = 5;
+            // 
+            // Email
+            // 
+            Email.AutoSize = true;
+            Email.Font = new Font("Segoe UI", 24F);
+            Email.Location = new Point(652, 283);
+            Email.Name = "Email";
+            Email.Size = new Size(96, 45);
+            Email.TabIndex = 6;
+            Email.Text = "Email";
+            // 
+            // NameL
+            // 
+            NameL.AutoSize = true;
+            NameL.Font = new Font("Segoe UI", 24F);
+            NameL.Location = new Point(652, 357);
+            NameL.Name = "NameL";
+            NameL.Size = new Size(105, 45);
+            NameL.TabIndex = 7;
+            NameL.Text = "Name";
+            // 
+            // Password
+            // 
+            Password.AutoSize = true;
+            Password.Font = new Font("Segoe UI", 24F);
+            Password.Location = new Point(652, 511);
+            Password.Name = "Password";
+            Password.Size = new Size(153, 45);
+            Password.TabIndex = 8;
+            Password.Text = "Password";
+            // 
+            // UserName
+            // 
+            UserName.AutoSize = true;
+            UserName.Font = new Font("Segoe UI", 24F);
+            UserName.Location = new Point(652, 435);
+            UserName.Name = "UserName";
+            UserName.Size = new Size(169, 45);
+            UserName.TabIndex = 9;
+            UserName.Text = "UserName";
+            // 
+            // ID
+            // 
+            ID.AutoSize = true;
+            ID.Font = new Font("Segoe UI", 24F);
+            ID.Location = new Point(652, 132);
+            ID.Name = "ID";
+            ID.Size = new Size(51, 45);
+            ID.TabIndex = 10;
+            ID.Text = "ID";
+            ID.Click += label5_Click;
+            // 
+            // numericUpDownID
+            // 
+            numericUpDownID.Font = new Font("Segoe UI", 24F);
+            numericUpDownID.Location = new Point(960, 127);
+            numericUpDownID.Name = "numericUpDownID";
+            numericUpDownID.Size = new Size(344, 50);
+            numericUpDownID.TabIndex = 11;
+            numericUpDownID.ValueChanged += numericUpDownID_ValueChanged;
+            // 
+            // textBoxEmail
+            // 
+            textBoxEmail.Font = new Font("Segoe UI", 24F);
+            textBoxEmail.Location = new Point(960, 278);
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(344, 50);
+            textBoxEmail.TabIndex = 12;
+            // 
+            // textBoxName
+            // 
+            textBoxName.Font = new Font("Segoe UI", 24F);
+            textBoxName.Location = new Point(960, 354);
+            textBoxName.Name = "textBoxName";
+            textBoxName.Size = new Size(344, 50);
+            textBoxName.TabIndex = 13;
+            // 
+            // textBoxUserName
+            // 
+            textBoxUserName.Font = new Font("Segoe UI", 24F);
+            textBoxUserName.Location = new Point(960, 430);
+            textBoxUserName.Name = "textBoxUserName";
+            textBoxUserName.Size = new Size(344, 50);
+            textBoxUserName.TabIndex = 14;
+            // 
+            // textBoxPassword
+            // 
+            textBoxPassword.Font = new Font("Segoe UI", 24F);
+            textBoxPassword.Location = new Point(960, 506);
+            textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.Size = new Size(344, 50);
+            textBoxPassword.TabIndex = 15;
+            textBoxPassword.TextChanged += textBox4_TextChanged;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ActiveCaptionText;
+            panel2.Location = new Point(960, 258);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(344, 14);
+            panel2.TabIndex = 16;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ActiveCaptionText;
+            panel3.Location = new Point(960, 334);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(344, 14);
+            panel3.TabIndex = 17;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = SystemColors.ActiveCaptionText;
+            panel4.Location = new Point(960, 410);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(344, 14);
+            panel4.TabIndex = 17;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = SystemColors.ActiveCaptionText;
+            panel5.Location = new Point(960, 486);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(344, 14);
+            panel5.TabIndex = 17;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = SystemColors.ActiveCaptionText;
+            panel6.Location = new Point(960, 183);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(344, 14);
+            panel6.TabIndex = 17;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(613, 112);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.Size = new Size(826, 513);
+            dataGridView1.TabIndex = 18;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1960, 981);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel6);
+            Controls.Add(panel5);
+            Controls.Add(panel4);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(textBoxPassword);
+            Controls.Add(textBoxUserName);
+            Controls.Add(textBoxName);
+            Controls.Add(textBoxEmail);
+            Controls.Add(numericUpDownID);
+            Controls.Add(ID);
+            Controls.Add(UserName);
+            Controls.Add(Password);
+            Controls.Add(NameL);
+            Controls.Add(Email);
+            Controls.Add(panel1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)numericUpDownID).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button Read;
+        private Button Create;
+        private Button Home;
+        private Button Delete;
+        private Button Update;
+        private Panel panel1;
+        private Label Email;
+        private Label NameL;
+        private Label Password;
+        private Label UserName;
+        private Label ID;
+        private NumericUpDown numericUpDownID;
+        private TextBox textBoxEmail;
+        private TextBox textBoxName;
+        private TextBox textBoxUserName;
+        private TextBox textBoxPassword;
+        private Panel panel2;
+        private Panel panel3;
+        private Panel panel4;
+        private Panel panel5;
+        private Panel panel6;
+        private DataGridView dataGridView1;
     }
 }
