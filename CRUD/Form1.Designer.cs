@@ -66,6 +66,7 @@
             Read.TabIndex = 2;
             Read.Text = "Read";
             Read.UseVisualStyleBackColor = false;
+            Read.Click += Read_Click;
             // 
             // Create
             // 
@@ -103,6 +104,7 @@
             Delete.TabIndex = 4;
             Delete.Text = "Delete";
             Delete.UseVisualStyleBackColor = false;
+            Delete.Click += Delete_Click;
             // 
             // Update
             // 
@@ -115,6 +117,7 @@
             Update.TabIndex = 3;
             Update.Text = "Update";
             Update.UseVisualStyleBackColor = false;
+            Update.Click += Update_Click;
             // 
             // panel1
             // 
@@ -124,7 +127,7 @@
             panel1.Controls.Add(Home);
             panel1.Controls.Add(Create);
             panel1.Controls.Add(Read);
-            panel1.Location = new Point(632, 780);
+            panel1.Location = new Point(382, 760);
             panel1.Name = "panel1";
             panel1.Size = new Size(866, 117);
             panel1.TabIndex = 5;
@@ -133,7 +136,7 @@
             // 
             Email.AutoSize = true;
             Email.Font = new Font("Segoe UI", 24F);
-            Email.Location = new Point(652, 283);
+            Email.Location = new Point(511, 257);
             Email.Name = "Email";
             Email.Size = new Size(96, 45);
             Email.TabIndex = 6;
@@ -143,7 +146,7 @@
             // 
             NameL.AutoSize = true;
             NameL.Font = new Font("Segoe UI", 24F);
-            NameL.Location = new Point(652, 357);
+            NameL.Location = new Point(511, 331);
             NameL.Name = "NameL";
             NameL.Size = new Size(105, 45);
             NameL.TabIndex = 7;
@@ -153,7 +156,7 @@
             // 
             Password.AutoSize = true;
             Password.Font = new Font("Segoe UI", 24F);
-            Password.Location = new Point(652, 511);
+            Password.Location = new Point(511, 485);
             Password.Name = "Password";
             Password.Size = new Size(153, 45);
             Password.TabIndex = 8;
@@ -163,7 +166,7 @@
             // 
             UserName.AutoSize = true;
             UserName.Font = new Font("Segoe UI", 24F);
-            UserName.Location = new Point(652, 435);
+            UserName.Location = new Point(511, 409);
             UserName.Name = "UserName";
             UserName.Size = new Size(169, 45);
             UserName.TabIndex = 9;
@@ -173,7 +176,7 @@
             // 
             ID.AutoSize = true;
             ID.Font = new Font("Segoe UI", 24F);
-            ID.Location = new Point(652, 132);
+            ID.Location = new Point(511, 106);
             ID.Name = "ID";
             ID.Size = new Size(51, 45);
             ID.TabIndex = 10;
@@ -183,7 +186,7 @@
             // numericUpDownID
             // 
             numericUpDownID.Font = new Font("Segoe UI", 24F);
-            numericUpDownID.Location = new Point(960, 127);
+            numericUpDownID.Location = new Point(819, 101);
             numericUpDownID.Name = "numericUpDownID";
             numericUpDownID.Size = new Size(344, 50);
             numericUpDownID.TabIndex = 11;
@@ -192,7 +195,7 @@
             // textBoxEmail
             // 
             textBoxEmail.Font = new Font("Segoe UI", 24F);
-            textBoxEmail.Location = new Point(960, 278);
+            textBoxEmail.Location = new Point(819, 252);
             textBoxEmail.Name = "textBoxEmail";
             textBoxEmail.Size = new Size(344, 50);
             textBoxEmail.TabIndex = 12;
@@ -200,7 +203,7 @@
             // textBoxName
             // 
             textBoxName.Font = new Font("Segoe UI", 24F);
-            textBoxName.Location = new Point(960, 354);
+            textBoxName.Location = new Point(819, 328);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(344, 50);
             textBoxName.TabIndex = 13;
@@ -208,7 +211,7 @@
             // textBoxUserName
             // 
             textBoxUserName.Font = new Font("Segoe UI", 24F);
-            textBoxUserName.Location = new Point(960, 430);
+            textBoxUserName.Location = new Point(819, 404);
             textBoxUserName.Name = "textBoxUserName";
             textBoxUserName.Size = new Size(344, 50);
             textBoxUserName.TabIndex = 14;
@@ -216,8 +219,9 @@
             // textBoxPassword
             // 
             textBoxPassword.Font = new Font("Segoe UI", 24F);
-            textBoxPassword.Location = new Point(960, 506);
+            textBoxPassword.Location = new Point(819, 480);
             textBoxPassword.Name = "textBoxPassword";
+            textBoxPassword.PasswordChar = '*';
             textBoxPassword.Size = new Size(344, 50);
             textBoxPassword.TabIndex = 15;
             textBoxPassword.TextChanged += textBox4_TextChanged;
@@ -225,7 +229,7 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Location = new Point(960, 258);
+            panel2.Location = new Point(819, 232);
             panel2.Name = "panel2";
             panel2.Size = new Size(344, 14);
             panel2.TabIndex = 16;
@@ -233,7 +237,7 @@
             // panel3
             // 
             panel3.BackColor = SystemColors.ActiveCaptionText;
-            panel3.Location = new Point(960, 334);
+            panel3.Location = new Point(819, 308);
             panel3.Name = "panel3";
             panel3.Size = new Size(344, 14);
             panel3.TabIndex = 17;
@@ -241,7 +245,7 @@
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Location = new Point(960, 410);
+            panel4.Location = new Point(819, 384);
             panel4.Name = "panel4";
             panel4.Size = new Size(344, 14);
             panel4.TabIndex = 17;
@@ -249,7 +253,7 @@
             // panel5
             // 
             panel5.BackColor = SystemColors.ActiveCaptionText;
-            panel5.Location = new Point(960, 486);
+            panel5.Location = new Point(819, 460);
             panel5.Name = "panel5";
             panel5.Size = new Size(344, 14);
             panel5.TabIndex = 17;
@@ -257,7 +261,7 @@
             // panel6
             // 
             panel6.BackColor = SystemColors.ActiveCaptionText;
-            panel6.Location = new Point(960, 183);
+            panel6.Location = new Point(819, 157);
             panel6.Name = "panel6";
             panel6.Size = new Size(344, 14);
             panel6.TabIndex = 17;
@@ -267,17 +271,18 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(613, 112);
+            dataGridView1.Location = new Point(28, 51);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(826, 513);
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(477, 479);
             dataGridView1.TabIndex = 18;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1960, 981);
+            ClientSize = new Size(1430, 905);
             Controls.Add(dataGridView1);
             Controls.Add(panel6);
             Controls.Add(panel5);
